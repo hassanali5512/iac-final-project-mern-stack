@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mern-stack-app:
+    image: mern_app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      no_cache: true
+    ports:
+      - "5000:5000"
+    container_name: 'mern-app'
+    hostname: 'hassan'
+    volumes:
+      - ./volume:/opt/volume
